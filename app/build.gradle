@@ -7,6 +7,10 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId "com.example.practicenavermap"
         minSdkVersion 19
@@ -36,6 +40,8 @@ dependencies {
 
     // 네이버 지도 SDK
     implementation 'com.naver.maps:map-sdk:3.11.0'
+    // 위치 추적 기능을 위한 의존성 추가
+    implementation "com.google.android.gms:play-services-location:16.0.0"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.5.0'
