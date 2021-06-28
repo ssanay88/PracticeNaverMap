@@ -25,8 +25,8 @@
         android:theme="@style/Theme.PracticeNaverMap"
 
 
-        tools:replace="android:appComponentFactory"
-        android:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+
+        >
 
 
 

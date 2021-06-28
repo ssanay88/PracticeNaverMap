@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(),OnMapReadyCallback {
     private lateinit var locationSource: FusedLocationSource
     private lateinit var naverMap: NaverMap
     private lateinit var mainBinding: ActivityMainBinding
-    private var geocoder : Geocoder = Geocoder(this)
+    private lateinit var geocoder : Geocoder
     // 네이버 지오코더 때문에 선언
     val naver = Naver(clientId = "9yulgtl3nq", clientSecret = "R9A3oPxTIi1CTqnETRNNGZ5VSFRoSjHPY00biFax")
 
@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity(),OnMapReadyCallback {
 
         locationSource = FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE)
 
+        geocoder  = Geocoder(this)
 
         // 현재 위치 불러오기
         val locationmanager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
